@@ -36,6 +36,10 @@ models:
     # Applies to all files under models/marts/core
     marts:
       core:
-        materialized: table
-      staging:
-        materialized: view
+        +materialized: table
+    staging:
+      jaffl_shop:
+        +materialized: view
+      stripe:
+        +materialized: view
+  
